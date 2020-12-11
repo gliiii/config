@@ -2,7 +2,7 @@ env: test
 spring:
   application:
     name: order
- datasource:
+  datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 123456
