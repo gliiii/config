@@ -1,15 +1,12 @@
 env: test
 spring:
   application:
-    name: config
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/gliiii/config.git
-          username: gliiii
-          password: Ligen199316
-          basedir: D:\IntelliJ IDEA 2019.2\IdeaProjects\SpringCloud_Shell\config\basedir
+    name: order
+ datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/SpringCloud_Shell?characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai	
 eureka:
   client:
     service-url:
