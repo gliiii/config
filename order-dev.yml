@@ -1,4 +1,4 @@
-env: dev2
+env: dev
 spring:
   application:
     name: order
