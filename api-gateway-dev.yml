@@ -1,17 +1,21 @@
 zuul:
-  #全部服务忽略敏感头(全部服务都可以传递cookie)
-  sensitive-headers: 
   routes:
-  # /myProduct/product/list -> /product/product/list
-    aaaaaa:
-      path: /myProduct/**
-      serviceId: product
-      sensitiveHeaders:
+#    myProduct:
+#      path: /myProduct/**
+#      serviceId: product
   #简洁写法
-#    product: /myProduct/**
-  #排除某些路由
+    product: /myProduct/**
+  #禁止将某些地址暴露出去
   ignored-patterns:
-    - /**/product/listForOrder     
+#    - /product/product/listForOrder
+#    - /myProduct/product/listForOrder
+    #通配上面两个地址
+    - /**/product/listForOrder
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"     
 ribbon:
   ReadTimeout: 5000
   SocketTimeout: 5000
