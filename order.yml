@@ -16,3 +16,6 @@ spring:
     port: 5672
     username: root
     password: 123456
+redis:
+    host: 47.104.245.4
+    port: 6379
